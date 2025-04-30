@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work - Jinghe Cai</title>
+
+  <!-- 通用CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/intro.css">
+  <link rel="stylesheet" href="css/fade.css">
+  <link rel="stylesheet" href="css/mini-me.css">
+  <link rel="stylesheet" href="css/work.css"> 
+
+  <!-- 通用JS -->
+  <script type="module" src="js/cursor.js"></script>
+  <script type="module" src="js/animation.js"></script>
+  <script type="module" src="js/mini-me.js"></script>
+
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+    <!-- 左边 Layout区域 -->
+    <div class="layout" id="mainLayout">
+      <header class="header fade-in-line">
+        <h1 class="logo">
+          <a href="index.html">
+          <span>J</span><span>i</span><span>n</span><span>g</span><span>h</span><span>e</span> <span>C</span><span>a</span><span>i</span>
+        </h1>
+      </a>
+        <nav class="nav">
+          <a href="work.html" class="cube-button">
+            <span class="face front">Work</span>
+            <span class="face top">Work</span>
+          </a>
+          <a href="about.html" class="cube-button">
+            <span class="face front">About</span>
+            <span class="face top">About</span>
+          </a>
+        </nav>
+      </header>
+
+      <div class="loading-bar" id="loadingBar"></div>
+
+      <!-- Loading Bar -->
+      <main class="main-box fade-in-line">
+
+        <!-- 分类Tabs -->
+        <div class="tabs">
+          <span class="tab active">All</span>
+          <span class="tab">Design</span>
+          <span class="tab">Research</span>
+          <span class="tab">Visual</span>
+        </div>
+      
+        <!-- 项目列表 -->
+        <div class="project-list">
+
+          <a href="你的链接地址1" target="_blank" class="project-row" data-image="media/MSFT-pic.svg">
+            <div class="project-name">Microsoft</div>
+            <div class="project-desc">AI Design Toolkits</div>
+            <div class="project-year">2025</div>
+          </a>
+        
+          <a href="https://lepal.ai/" target="_blank" class="project-row" data-image="media/Lepal-pic.svg">
+            <div class="project-name">LePal.ai</div>
+            <div class="project-desc">AI Mental Health Companion</div>
+            <div class="project-year">2025</div>
+          </a>
+        
+          <a href="https://www.indigoaward.com/winners/10749" target="_blank" class="project-row" data-image="media/Pink.svg">
+            <div class="project-name">Pink Panthers</div>
+            <div class="project-desc">Menstrual Health Platform</div>
+            <div class="project-year">2024</div>
+          </a>
+        
+          <a href="https://drive.google.com/file/d/1l3PhOtKV5Q8_Mri0PEO7MoCaqzhtVAE_/view?usp=drive_link" target="_blank" class="project-row" data-image="media/Pink.svg">
+            <div class="project-name">Playground</div>
+            <div class="project-desc">Universal Design Principles</div>
+            <div class="project-year">2024</div>
+          </a>
+        
+          <a href="https://dl.acm.org/doi/full/10.1145/3544549.3585639" target="_blank" class="project-row" data-image="media/Pink.svg">
+            <div class="project-name">CatHill</div>
+            <div class="project-desc">Emotion-adaptive Storytelling</div>
+            <div class="project-year">2023</div>
+          </a>
+        
+          <a href="https://dl.acm.org/doi/10.1145/3544548.3581539" target="_blank" class="project-row" data-image="media/Pink.svg">
+            <div class="project-name">Digital Making</div>
+            <div class="project-desc">Empirical studies in HCI</div>
+            <div class="project-year">2023</div>
+          </a>
+        
+          <a href="https://dl.acm.org/doi/abs/10.1145/3450337.3483461" target="_blank" class="project-row" data-image="media/Pink.svg">
+            <div class="project-name">Wander</div>
+            <div class="project-desc">Gamified Sleep Experience</div>
+            <div class="project-year">2021</div>
+          </a>
+        
+        </div>
+        
+      
+      </main>
+      
+
+    </div>
+
+    <!-- 右边 Work区域 -->
+    <div class="work-box-wrapper">
+      <div class="work-box" id="workBox"></div>
+    </div>
+
+  </div> <!-- page-wrapper -->
+
+  <!-- mini-me（继续独立放在外面，不变） -->
+  <div id="miniMeContainer">
+    <img src="media/minime.svg" id="miniMeSVG" alt="mini-me" />
+    <canvas id="miniMeEyesCanvas" width="120" height="120"></canvas>
+  
+    <!-- ✨ 新加的消息气泡 -->
+    <div id="miniMeMessage" class="hidden">
+      Every design tells a story. Jinghe has many to tell.
+    </div>
+  </div>
+
+
+  
+
+  <!-- 自定义鼠标 -->
+  <div id="custom-cursor"></div>
+
+</body>
+
+</html>

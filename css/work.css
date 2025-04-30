@@ -1,0 +1,143 @@
+/* 整个页面外层，用来并列左layout和右框 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #FFFCF2;
+  cursor: none;
+}
+
+
+.page-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10vw 1vw; /* ✨ 不靠padding让它们下移 */
+  gap: 5vw;
+  position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.layout, .work-box-wrapper {
+  height: 100%;
+  transform: translateY(-5vh); /* ✨ 内容往上提一点 */
+}
+
+  /* 左边 layout */
+  .layout {
+    flex: 0 0 50%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 右边work框 */
+  .work-box-wrapper {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 上排 */
+    align-items: center; /* 水平居中 */
+    padding-top: 30px;
+
+  }
+  
+  .work-box {
+    height: 350px;
+    aspect-ratio: 4.5 / 3; /* ✨宽高比4:3 */
+    border: 1px solid #4285F4;
+    background: transparent;
+    width: auto; /* ✨宽度自动根据高度比例生成 */
+    /* max-width: calc(4 / 3 * 350px);  */
+    /* ✨可选：防止过宽，严格跟高度比例 */
+    background-color: transparent;
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease-in-out;
+  }
+  
+  
+  
+
+  /* Tabs 分类 */
+  .tabs {
+    display: flex;
+    justify-content: space-between; /* ✨平均分布 */
+    width: 100%; /* ✨占满父容器宽度 */
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 14px;
+    font-family: 'Abyssinica SIL', sans-serif;
+  }
+  
+  
+  .tab {
+    color: #DFE6F0; /* 默认淡蓝色 */
+    position: relative;
+    transition: color 0.3s ease; /* ✨ 加平滑过渡 */
+  }
+  
+  .tab.active {
+    color: #4285F4; /* 激活态深蓝色 */
+  }
+  
+  /* 🎯 Hover 状态 */
+  .tab:hover {
+    color: #4285F4;
+  }
+  
+  
+/* 项目列表 */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px; /* ✨ 控制整体列表宽度 */
+  margin-left: 0;   /* ✨ 靠左对齐 */
+}
+
+.project-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none; /* 去掉超链接下划线 */
+  cursor: none;
+}
+
+/* 默认状态 */
+.project-name,
+.project-desc,
+.project-year {
+  font-size: 15px;
+  color: #DFE6F0; /* 默认是浅蓝色 */
+  font-family: 'Inter';
+  transition: color 0.3s ease; /* 平滑过渡 */
+}
+
+.project-name {
+  flex: 1;
+  text-align: left;
+}
+
+.project-desc {
+  flex: 1.5;
+  text-align: left;
+}
+
+.project-year {
+  flex: 0.6;
+  text-align: right;
+}
+
+/* 🎯 hover整行，内部字体全部变深蓝色 */
+.project-row:hover .project-name,
+.project-row:hover .project-desc,
+.project-row:hover .project-year {
+  color: #4285F4;
+}
+
+  

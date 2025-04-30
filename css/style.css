@@ -1,0 +1,203 @@
+/* Reset base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #FFFCF2;
+  font-family: 'Inter', 'Abyssinica SIL', sans-serif;
+  color: #4285F4;
+  cursor: none;
+}
+
+
+
+/* Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(73, 18, 169, 0.8);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  will-change: transform, background-color;
+}
+
+body.hovering-text #custom-cursor {
+  background-color: rgb(84, 54, 54);
+}
+
+/* Layout wrapper */
+/* Layout 变成真正铺满屏幕 */
+.layout {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* mini-me等fixed元素参考 */
+}
+
+/* 新加的 内容容器，负责最大宽度和居中 */
+.content-wrapper {
+  width: 90vw;
+  max-width: 645px;
+  min-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  transform: translateY(-5vh); /* ✨ 内容往上提一点 */
+}
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .nav {
+  display: flex;
+  gap: 30px; /* 这里控制 Work 和 About 之间的间距 */
+}
+
+
+.logo {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4285F4;
+  cursor: none;
+}
+
+.logo:hover {
+  color: #4285F4;
+  cursor: none;
+}
+
+.logo span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo a {
+  color: inherit; /* 让链接继承父元素颜色 */
+  text-decoration: none; /* 去掉下划线 */
+}
+
+#loadingBar {
+  width: 0%; /* ✅ 初始是0%，然后通过JS动画拉伸 */
+  height: 0.9px; /* ✅ 控制粗细，高度不会动 */
+  background-color: #4285F4;
+}
+
+
+/* Main box */
+.main-box {
+  width: 100%;
+  /* aspect-ratio: 4/2; */
+  max-width: 720px;
+  min-width: 320px;
+  box-sizing: border-box;
+  /* padding: 20px 45px 24px 45px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Content block */
+.main-content {
+  width: fit-content;
+  margin: auto;
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Footer */
+/* .footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  font-family: 'Abyssinica SIL', sans-serif;
+  color: #000;
+  margin-top: 10px;
+} */
+
+/* Role text */
+.role {
+  font-weight: 500;
+  color: inherit;
+}
+
+/* Cube button */
+.cube-button {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  min-width: unset;
+  height: 30px;
+  perspective: 600px;
+  text-decoration: none;
+  cursor: none;
+}
+
+.header .cube-button {
+  min-width: 40px; 
+}
+
+
+
+/* .footer .cube-button {
+  width: 100px;
+  min-width: 60px;
+} */
+
+.cube-button .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #4285F4;
+  font-family: 'Abyssinica SIL', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cube-button .top {
+  transform: rotateX(90deg) translateY(-100%);
+  transform-origin: top;
+}
+
+.cube-button:hover .front {
+  transform: rotateX(-90deg) translateY(100%);
+  transform-origin: bottom;
+}
+
+.cube-button:hover .top {
+  transform: rotateX(0deg) translateZ(0);
+
+}
+

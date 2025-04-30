@@ -1,0 +1,11 @@
+.fade-in-line {
+  opacity: 0;
+  transform: translateY(20px); /* 可选，让初始有一点往下掉 */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-line.show {
+  opacity: 1;
+  transform: translateY(0);
+}
