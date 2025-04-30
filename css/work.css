@@ -7,6 +7,15 @@ html, body {
   cursor: none;
 }
 
+body a,
+body a:hover,
+.logo a,
+.cube-button,
+.project-row {
+  cursor: none;
+}
+
+
 
 .page-wrapper {
   display: flex;
