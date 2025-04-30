@@ -59,7 +59,7 @@ body a:hover,
     align-items: center;     /* 垂直居中 */
     height: 350px;
     aspect-ratio: 4.5 / 3;
-    border: 1px solid #4285F4;
+    border: 1px solid #3A86FE;
   }
   
   
@@ -88,18 +88,18 @@ body a:hover,
   
   
   .tab {
-    color: #DFE6F0; /* 默认淡蓝色 */
+    color: #aec8ec; /* 默认淡蓝色 */
     position: relative;
     transition: color 0.3s ease; /* ✨ 加平滑过渡 */
   }
   
   .tab.active {
-    color: #4285F4; /* 激活态深蓝色 */
+    color: #3A86FE; /* 激活态深蓝色 */
   }
   
   /* 🎯 Hover 状态 */
   .tab:hover {
-    color: #4285F4;
+    color: #3A86FE;
   }
   
   
@@ -125,8 +125,8 @@ body a:hover,
 .project-name,
 .project-desc,
 .project-year {
-  font-size: 15px;
-  color: #DFE6F0; /* 默认是浅蓝色 */
+  font-size: 14px;
+  color: #aec8ec; /* 默认是浅蓝色 */
   font-family: 'Inter';
   transition: color 0.3s ease; /* 平滑过渡 */
 }
@@ -150,7 +150,7 @@ body a:hover,
 .project-row:hover .project-name,
 .project-row:hover .project-desc,
 .project-row:hover .project-year {
-  color: #4285F4;
+  color: #3A86FE;
 }
 
 

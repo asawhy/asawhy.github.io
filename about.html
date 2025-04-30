@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jinghe Cai</title>
+
+  <!-- 原本的CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/intro.css" />
+  <link rel="stylesheet" href="css/fade.css" />
+
+  <!-- 新加的 mini-me CSS -->
+  <link rel="stylesheet" href="css/mini-me.css" />
+
+  <!-- 原本的JS -->
+  <script type="module" src="js/cursor.js"></script>
+  <script type="module" src="js/animation.js"></script>
+
+  <!-- 新加的 mini-me JS -->
+  <script type="module" src="js/mini-me.js"></script>
+
+</head>
+
+<body>
+  <div class="layout" id="mainLayout">
+
+    <!-- 新加的一层内容容器 -->
+    <div class="content-wrapper">
+
+      <header class="header fade-in-line">
+        <h1 class="logo">
+          <a href="index.html">
+          <span>J</span><span>i</span><span>n</span><span>g</span><span>h</span><span>e</span> <span>C</span><span>a</span><span>i</span>
+        </h1>
+        </a>
+   
+        <nav class="nav">
+          <a href="work.html" class="cube-button">
+            <span class="face front">Work</span>
+            <span class="face top">Work</span>
+          </a>
+          <a href="about.html" class="cube-button">
+            <span class="face front">About</span>
+            <span class="face top">About</span>
+          </a>
+        </nav>
+      </header>
+
+      <!-- Loading Bar -->
+      <div class="loading-bar" id="loadingBar"></div>
+
+      <main class="main-box fade-in-line">
+        <div class="main-content fade-in-line" style="transition-delay: 0.4s">
+          <p>
+            A product designer grounded in affective computing, studying how emotional signals shape the way humans interact with technology.
+          </p>
+        </div>
+
+        <div class="footer">
+          <!-- Footer Links（暂时注释） -->
+        </div>
+      </main>
+
+    </div> <!-- 结束 content-wrapper -->
+
+    <!-- mini-me，继续在layout下面，不受content-wrapper宽度限制 -->
+    <div id="miniMeContainer">
+      <img src="media/minime.svg" id="miniMeSVG" alt="mini-me" />
+      <canvas id="miniMeEyesCanvas" width="120" height="120"></canvas>
+    
+      <!-- ✨ 新加的消息气泡 -->
+      <div id="miniMeMessage" class="hidden">
+        Jinghe’s not around... but I stayed, her little mini-me.
+      </div>
+    </div>
+    
+    
+  </div> <!-- 结束 layout -->
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor"></div>
+</body>
+
+
+</html>

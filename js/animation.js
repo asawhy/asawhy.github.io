@@ -88,3 +88,64 @@ projectRows.forEach(row => {
     workBoxImage.src = ''; // 可改为默认图
   });
 });
+
+
+
+const tabs = document.querySelectorAll('.tab');
+const allProjects = document.querySelectorAll('.project-row');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // 切换 tab 高亮样式
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.getAttribute('data-filter');
+
+    allProjects.forEach(project => {
+      const raw = project.getAttribute('data-category') || '';
+      const categoryList = raw.trim().split(/\s+/); // 用空格切分多个标签
+
+      if (filter === 'all') {
+        project.style.display = 'flex';
+      } else {
+        const match = categoryList.includes(filter);
+        project.style.display = match ? 'flex' : 'none';
+      }
+    });
+  });
+});
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.getAttribute('data-filter');
+
+    // Step 1: 所有项目淡出
+    const fadeOutRows = [...allProjects].filter(p => p.style.display !== 'none');
+    gsap.to(fadeOutRows, {
+      opacity: 0,
+      duration: 0.3,
+      onComplete: () => {
+        // Step 2: 全部隐藏（设置 display）
+        allProjects.forEach(project => {
+          const raw = project.getAttribute('data-category') || '';
+          const categoryList = raw.trim().split(/\s+/);
+          const match = filter === 'all' || categoryList.includes(filter);
+          project.style.display = match ? 'flex' : 'none';
+        });
+
+        // Step 3: 新项目立即设为透明再淡入
+        const fadeInRows = [...allProjects].filter(p => p.style.display !== 'none');
+        gsap.fromTo(fadeInRows,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.5, stagger: 0.05, ease: "power2.out" }
+        );
+      }
+    });
+  });
+});
+
+
