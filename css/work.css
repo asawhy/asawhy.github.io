@@ -45,19 +45,23 @@ html, body {
   }
   
   .work-box {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
     height: 350px;
-    aspect-ratio: 4.5 / 3; /* ✨宽高比4:3 */
+    aspect-ratio: 4.5 / 3;
     border: 1px solid #4285F4;
-    background: transparent;
-    width: auto; /* ✨宽度自动根据高度比例生成 */
-    /* max-width: calc(4 / 3 * 350px);  */
-    /* ✨可选：防止过宽，严格跟高度比例 */
-    background-color: transparent;
-    background-size:auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 0.3s ease-in-out;
   }
+  
+  
+  .work-box img {
+    width: 100%; /* 你可以调小调大试试看 */
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  
+  
   
   
   
@@ -140,4 +144,4 @@ html, body {
   color: #4285F4;
 }
 
-  
+

@@ -77,16 +77,14 @@ window.addEventListener('load', () => {
 });
 
 const projectRows = document.querySelectorAll('.project-row');
-const workBox = document.getElementById('workBox');
+const workBoxImage = document.getElementById('workBoxImage');
 
 projectRows.forEach(row => {
   const imageUrl = row.getAttribute('data-image');
-
   row.addEventListener('mouseenter', () => {
-    workBox.style.backgroundImage = `url(${imageUrl})`;
+    workBoxImage.src = imageUrl;
   });
-
   row.addEventListener('mouseleave', () => {
-    workBox.style.backgroundImage = ''; // 或者恢复默认图：url('default.jpg')
+    workBoxImage.src = ''; // 可改为默认图
   });
 });
