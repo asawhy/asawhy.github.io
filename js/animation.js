@@ -27,6 +27,15 @@ window.addEventListener('load', () => {
     ease: "power2.out"
   }, "-=0.2")
 
+// Step 3.5: about 页面专属内容渐入
+.fromTo([".about-main", ".about-right"],
+  { opacity: 0 },
+  { opacity: 1, duration: 3, ease: "power2.out" },
+  "-=0.8" // 和上一段动画略微重叠
+)
+
+
+
   // Step 4: 页面加载完以后，logo跳动一次！
   .add(() => {
     logoJumpTimeline.restart();

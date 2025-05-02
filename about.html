@@ -2,44 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jinghe Cai</title>
 
-  <!-- 原本的CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/intro.css" />
-  <link rel="stylesheet" href="css/fade.css" />
+  <!-- 通用CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/intro.css">
+  <link rel="stylesheet" href="css/fade.css">
+  <link rel="stylesheet" href="css/mini-me.css">
+  <link rel="stylesheet" href="css/work.css"> 
+  <link rel="stylesheet" href="css/about.css">
 
-  <!-- 新加的 mini-me CSS -->
-  <link rel="stylesheet" href="css/mini-me.css" />
-
-  <!-- 原本的JS -->
+  <!-- 通用JS -->
   <script type="module" src="js/cursor.js"></script>
   <script type="module" src="js/animation.js"></script>
-
-  <!-- 新加的 mini-me JS -->
   <script type="module" src="js/mini-me.js"></script>
-
 </head>
 
 <body>
-  <div class="layout" id="mainLayout">
 
-    <!-- 新加的一层内容容器 -->
-    <div class="content-wrapper">
-
+  <div class="page-wrapper">
+    <!-- 左边 Layout区域 -->
+    <div class="layout" id="mainLayout">
       <header class="header fade-in-line">
         <h1 class="logo">
           <a href="index.html">
-          <span>J</span><span>i</span><span>n</span><span>g</span><span>h</span><span>e</span> <span>C</span><span>a</span><span>i</span>
+            <span>J</span><span>i</span><span>n</span><span>g</span><span>h</span><span>e</span> <span>C</span><span>a</span><span>i</span>
+          </a>
         </h1>
-        </a>
-   
         <nav class="nav">
           <a href="work.html" class="cube-button">
-            <span class="face front">Work</span>
-            <span class="face top">Work</span>
+            <span class="face front">Works</span>
+            <span class="face top">Works</span>
           </a>
           <a href="about.html" class="cube-button">
             <span class="face front">About</span>
@@ -51,37 +46,61 @@
       <!-- Loading Bar -->
       <div class="loading-bar" id="loadingBar"></div>
 
-      <main class="main-box fade-in-line">
-        <div class="main-content fade-in-line" style="transition-delay: 0.4s">
+      <main class="main-box fade-in-line about-main">
+        <div class="about-left">
           <p>
-            A product designer grounded in affective computing, studying how emotional signals shape the way humans interact with technology.
+            Jinghe Cai is a multidisciplinary product designer based in the U.S., with a background that bridges design thinking, affective computing, and visual storytelling.
+          </p>
+          <p>
+            With over five years of research experience, Jinghe has published in top HCI venues and served as a reviewer for ACM CHI and ACM Multimedia between 2022 and 2024. She values research not just as a tool for understanding, but as a foundation for identifying actionable design opportunities.
+          </p>
+          <p>
+            Beyond UX, Jinghe is also a visual artist and comic creator. Between 2020 and 2025, she published a series of comics exploring the subtleties of human emotion, and continues to post comics and drawings that reflect on emotion and everyday interactions.
           </p>
         </div>
-
-        <div class="footer">
-          <!-- Footer Links（暂时注释） -->
-        </div>
       </main>
+    </div>
 
-    </div> <!-- 结束 content-wrapper -->
-
-    <!-- mini-me，继续在layout下面，不受content-wrapper宽度限制 -->
-    <div id="miniMeContainer">
-      <img src="media/minime.svg" id="miniMeSVG" alt="mini-me" />
-      <canvas id="miniMeEyesCanvas" width="120" height="120"></canvas>
-    
-      <!-- ✨ 新加的消息气泡 -->
-      <div id="miniMeMessage" class="hidden">
-        Jinghe’s not around... but I stayed, her little mini-me.
+    <!-- ✅ 正确嵌套在 page-wrapper 内 -->
+    <div class="about-right">
+      <div class="about-section" id="contact-section">
+        <h4>Contact</h4>
+        <p><a href="mailto:jinghe-cai@outlook.com">jinghe-cai@outlook.com</a></p>
+        <p><a href="https://www.linkedin.com/in/jinghe-cai" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        <p><a href="https://scholar.google.com/citations?user=USR_nP8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+        <p><a href="https://drive.google.com/file/d/1IsOUI2ZcsX_7XXkCw_bYc1aIiybE1FQT/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a></p>
       </div>
     </div>
     
-    
-  </div> <!-- 结束 layout -->
 
-  <!-- Custom Cursor -->
+      <!-- 可启用的 Experience 区块 -->
+      <!--
+      <div class="about-section" id="experience-section">
+        <h4>Experience</h4>
+        <p>
+          Microsoft<br>
+          <span class="small-text">UX Research lead / Design Strategist<br>Mar 2025 – Present</span>
+        </p>
+        <p>
+          Lepal.ai<br>
+          <span class="small-text">Product Design Intern<br>Sep 2024 – Jan 2025</span>
+        </p>
+      </div>
+      -->
+    </div>
+  </div> <!-- ✅ 正确关闭 page-wrapper -->
+
+  <!-- ✅ mini-me 模块 -->
+  <div id="miniMeContainer">
+    <img src="media/minime.svg" id="miniMeSVG" alt="mini-me" />
+    <canvas id="miniMeEyesCanvas" width="120" height="120"></canvas>
+    <div id="miniMeMessage" class="hidden">
+      Designer by day, researcher by habit, cartoonist when the theory gets too dense.
+    </div>
+  </div>
+
+  <!-- ✅ 自定义鼠标光标 -->
   <div id="custom-cursor"></div>
+
 </body>
-
-
 </html>
