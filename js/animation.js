@@ -157,4 +157,13 @@ tabs.forEach(tab => {
   });
 });
 
+window.addEventListener("load", () => {
+  gsap.to("#contact-section", {
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    ease: "power2.out",
+    delay: 0.5, // 可选：延迟 0.5 秒出现
+  });
+});
 
