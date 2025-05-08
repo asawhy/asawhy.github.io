@@ -1,5 +1,3 @@
-import { gsap } from "https://cdn.skypack.dev/gsap";
-
 
 
 // 页面加载动画 timeline
