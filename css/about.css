@@ -5,6 +5,7 @@ html, body {
 
 .page-wrapper {
   height: auto;
+  padding-bottom: 1rem; 
 }
 
 
@@ -26,6 +27,7 @@ html, body {
   color: #3A86FE;
   max-width: 600px;
   padding-top: 12px;
+  
 }
 
 
@@ -158,6 +160,7 @@ html, body {
   font-family: 'Inter', sans-serif;
   color: #3A86FE;
   margin: 0 0 4px 0;
+  text-align: left;
 }
 
 .award-year {
@@ -170,9 +173,9 @@ html, body {
 
 
 .page-footer {
-  padding-top: 10rem;
+  padding-top: 20rem;
   font-size: 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Abyssinica SIL', sans-serif;
   font-weight: 400;
   color: #aec8ec;
 }

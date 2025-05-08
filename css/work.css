@@ -126,7 +126,7 @@ body a:hover,
 .project-name,
 .project-desc,
 .project-year {
-  font-size: 15px;
+  font-size: 14px;
   color: #aec8ec; /* 默认是浅蓝色 */
   font-family: 'Inter';
   transition: color 0.3s ease; /* 平滑过渡 */
