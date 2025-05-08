@@ -1,5 +1,7 @@
 import { gsap } from "https://cdn.skypack.dev/gsap";
 
+
+
 // 页面加载动画 timeline
 window.addEventListener('load', () => {
   const pageTimeline = gsap.timeline(); // ✅重新命名，不冲突！

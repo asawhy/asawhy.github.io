@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/intro.css">
   <link rel="stylesheet" href="css/fade.css">
   <link rel="stylesheet" href="css/mini-me.css">
-  <link rel="stylesheet" href="css/work.css"> 
+  <link rel="stylesheet" href="css/work.css">
   <link rel="stylesheet" href="css/about.css">
 
   <!-- 通用JS -->
@@ -28,7 +28,8 @@
       <header class="header fade-in-line">
         <h1 class="logo">
           <a href="index.html">
-            <span>J</span><span>i</span><span>n</span><span>g</span><span>h</span><span>e</span> <span>C</span><span>a</span><span>i</span>
+            <span>J</span><span>i</span><span>n</span><span>g</span><span>h</span><span>e</span>
+            <span>C</span><span>a</span><span>i</span>
           </a>
         </h1>
         <nav class="nav">
@@ -49,16 +50,47 @@
       <main class="main-box fade-in-line about-main">
         <div class="about-left">
           <p>
-            Jinghe Cai is a product designer with a multidisciplinary background in design thinking, affective computing, and visual storytelling.
+            Jinghe Cai is a product designer with a multidisciplinary background in design thinking, affective
+            computing, and visual storytelling. Her experience spans cutting-edge HCI research, start-ups, AI systems,
+            and iOS app design.
           </p>
           <p>
-            With over five years of research experience, Jinghe has published in top HCI venues and served as a reviewer for ACM CHI and ACM Multimedia between 2022 and 2024. She values research not just as a tool for understanding, but as a foundation for identifying actionable design opportunities.
+            With over five years of research experience, Jinghe has published in leading HCI venues and served as a
+            reviewer for ACM CHI and ACM Multimedia between 2022 and 2024. She sees research not just as a tool for
+            understanding, but as a foundation for spotting actionable design opportunities. Beyond digital products,
+            she is also a cartoonist. Between 2020 and 2025, she published comics that reflect the tension,
+            awkwardness, and warmth in everyday life.
           </p>
-          <p>
-            Beyond digital products, Jinghe is also a visual artist. Between 2020 and 2025, she published comics reflecting on the tension, awkwardness, and warmth in everyday life.
-          </p>
+
+          <!-- ✅ 新加的 Awards 区块（无 li） -->
+          <div class="awards-section fade-in-line">
+            <h4>AWARDS & HONOR</h4>
+            <p><span class="award-year">2025</span> MUSE Design Awards, Gold Winner in User Experience (professional)
+            </p>
+            <p><span class="award-year">2025</span> NY Product Awards, Gold Winner in Product Design</p>
+            <p><span class="award-year">2025</span> Indigo Design Awards, Bronze Winner (student)</p>
+            <p><span class="award-year">2023</span> CIAC (China Illustration Annual Competition), Selected for Exhibition</p>
+
+            <p><span class="award-year">2020</span> International Student Animation Festival, Best
+              Single-panel Comic (sole recipient) </p>
+            <p><span class="award-year">2017</span> Times Young Creative Awards, Honorable Mention</p>
+
+
+            
+
+          </div>
+
+
+          
+          <footer class="page-footer">
+            ©2025 Jinghe Cai. All rights reserved.
+          </footer>
+
         </div>
-      </main>
+
+        
+      </main> <!-- ✅ 正确关闭 main -->
+
     </div>
 
     <!-- ✅ 正确嵌套在 page-wrapper 内 -->
@@ -67,18 +99,16 @@
         <h4>Contact</h4>
         <p><a href="mailto:jinghe-cai@outlook.com">jinghe-cai@outlook.com</a></p>
         <p><a href="https://www.linkedin.com/in/jinghe-cai" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-        <p><a href="https://scholar.google.com/citations?user=USR_nP8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
-        <p><a href="https://drive.google.com/file/d/1IsOUI2ZcsX_7XXkCw_bYc1aIiybE1FQT/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Resume</a></p>
+        <p><a href="https://scholar.google.com/citations?user=USR_nP8AAAAJ&hl=en" target="_blank"
+            rel="noopener noreferrer">Google Scholar</a></p>
+        <p><a href="https://drive.google.com/file/d/1IsOUI2ZcsX_7XXkCw_bYc1aIiybE1FQT/view?usp=drive_link"
+            target="_blank" rel="noopener noreferrer">Resume</a></p>
       </div>
-    </div>
-    
 
-      <!-- 可启用的 Experience 区块 -->
-      <!--
       <div class="about-section" id="experience-section">
         <h4>Experience</h4>
         <p>
-          Microsoft<br>
+          Microsoft (sponsor project)<br>
           <span class="small-text">UX Research lead / Design Strategist<br>Mar 2025 – Present</span>
         </p>
         <p>
@@ -86,21 +116,22 @@
           <span class="small-text">Product Design Intern<br>Sep 2024 – Jan 2025</span>
         </p>
       </div>
-      -->
     </div>
-  </div> <!-- ✅ 正确关闭 page-wrapper -->
+  </div> <!-- ✅ 现在正确关闭 page-wrapper -->
 
   <!-- ✅ mini-me 模块 -->
   <div id="miniMeContainer">
     <img src="media/minime.svg" id="miniMeSVG" alt="mini-me" />
     <canvas id="miniMeEyesCanvas" width="120" height="120"></canvas>
-    <div id="miniMeMessage" class="hidden">
+    <!-- <div id="miniMeMessage" class="hidden">
       A designer by day, a researcher by habit, and a cartoonist when theory gets too dense.
-    </div>
+    </div>  -->
   </div>
 
   <!-- ✅ 自定义鼠标光标 -->
   <div id="custom-cursor"></div>
+  
 
 </body>
+
 </html>

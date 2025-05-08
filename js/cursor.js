@@ -1,12 +1,12 @@
 const cursor = document.getElementById('custom-cursor');
 
-// 监听鼠标移动事件
+// 跟踪鼠标位置
 document.addEventListener('mousemove', (e) => {
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 });
 
-// 可选：监听鼠标进入离开页面，显示/隐藏cursor（增强体验）
+// 鼠标进入页面时显示
 document.addEventListener('mouseenter', () => {
   cursor.style.opacity = 1;
 });
@@ -15,3 +15,17 @@ document.addEventListener('mouseleave', () => {
   cursor.style.opacity = 0;
 });
 
+// ✅ 所有可点击元素 hover 时放大 cursor
+const hoverTargets = document.querySelectorAll(
+  'a, button, [role="button"], [onclick], .cube-button, .logo, .tab'
+);
+
+
+hoverTargets.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    document.body.classList.add('hovering-ui');
+  });
+  el.addEventListener('mouseleave', () => {
+    document.body.classList.remove('hovering-ui');
+  });
+});

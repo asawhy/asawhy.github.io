@@ -1,3 +1,15 @@
+html, body {
+  height: auto;
+}
+
+
+.page-wrapper {
+  height: auto;
+}
+
+
+
+
 .header {
   position: relative;
 }
@@ -7,12 +19,17 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Inter', sans-serif;
-  line-height: 1.8;
+  font-weight: 400;
+  line-height: 1.6;
   color: #3A86FE;
   max-width: 600px;
+  padding-top: 12px;
 }
+
+
+
 
 .button-link {
   margin-top: 1rem;
@@ -23,6 +40,7 @@
 }
 
 
+
   
   /* 右侧区域 */
   .about-right {
@@ -31,11 +49,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    transform: translateY(-5vh); /* 与左侧保持同步偏移 */
+    transform: translateY(-5vh); 
     font-family: 'Inter', sans-serif;
     color: #3A86FE;
-    font-size: 14px;
-    padding: 18px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 16px;
     margin-left: 15px
   }
 
@@ -62,7 +81,8 @@
   .about-section h4 {
     margin-bottom: 0.5rem;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 400;
     color: #3A86FE;
   }
   
@@ -78,7 +98,6 @@
 /* 仅调整 about-right 区域内部段落的间距 */
 .about-right .about-section p {
     margin: 0.4rem 0;
-    line-height: 1.6;
   }
   
   /* 联系方式链接区域额外微调，保持更紧凑 */
@@ -90,7 +109,7 @@
   #contact-section h4,
   #experience-section h4 {
     font-family: 'Abyssinica SIL', sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   
 
@@ -100,34 +119,10 @@
   text-decoration: none;
 }
 
-/* Resume 按钮样式 */
-.about-right .button-link {
-  display: inline-block;
-  border: 1px solid #3A86FE;
-  padding: 6px 12px;
-  border-radius: 6px;
-  color: #3A86FE;
-  font-size: 13px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
 .about-right .button-link:hover {
   background-color: #3A86FE;
   color: #aec8ec;
   text-decoration: none;
-}
-
-/* Resume按钮样式 */
-.button-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 6px 12px;
-  border: 1px solid #3A86FE;
-  border-radius: 6px;
-  color: #3A86FE;
-  font-size: 13px;
-  text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .button-link:hover {
@@ -136,7 +131,7 @@
 }
 
 #experience-section p + p {
-  margin-top: 0.8rem; /* 或 1rem，看你想要的空隙感 */
+  margin-top: 1rem; /* 或 1rem，看你想要的空隙感 */
 }
 
 #contact-section p:first-of-type {
@@ -147,3 +142,38 @@
 #contact-section p:not(:first-of-type) {
   margin: 0.1rem 0; /* 控制下面三个之间的间距 */
 }
+
+.awards-section h4 {
+  font-size: 15px;
+  font-family: 'Abyssinica SIL', sans-serif;
+  font-weight: normal;
+  color: #3A86FE;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.awards-section p {
+  line-height: 1.6;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: #3A86FE;
+  margin: 0 0 4px 0;
+}
+
+.award-year {
+  display: inline-block;
+  font-weight: 500;
+  margin-right: 10px; /* ✅ 控制年份和内容之间的间隔 */
+  min-width: 45px;     /* ✅ 保持年份对齐感（可选） */
+}
+
+
+
+.page-footer {
+  padding-top: 10rem;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #aec8ec;
+}
+

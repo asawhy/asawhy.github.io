@@ -38,6 +38,7 @@ body a:hover,
   .layout {
     flex: 0 0 50%;
     max-width: 600px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
@@ -82,7 +83,7 @@ body a:hover,
     width: 100%; /* ✨占满父容器宽度 */
     margin-top: 0.5rem;
     margin-bottom: 2rem;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Abyssinica SIL', sans-serif;
   }
   
@@ -125,7 +126,7 @@ body a:hover,
 .project-name,
 .project-desc,
 .project-year {
-  font-size: 14px;
+  font-size: 15px;
   color: #aec8ec; /* 默认是浅蓝色 */
   font-family: 'Inter';
   transition: color 0.3s ease; /* 平滑过渡 */
@@ -152,5 +153,7 @@ body a:hover,
 .project-row:hover .project-year {
   color: #3A86FE;
 }
+
+
 
 
