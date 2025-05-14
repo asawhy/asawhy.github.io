@@ -22,26 +22,31 @@
 
   
 
-  #miniMeMessage {
-    position: absolute;
-    bottom: 70px;
-    right: 90px;
-    max-width: 250px;
-    min-width: 218px;
-    background: #FFFCF2;
-    border: 1px solid #3A86FE;
-    border-radius: 8px;
-    padding: 8px 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    color: #3A86FE;
-    line-height: 1.5;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 1s ease, transform 1s ease;
-    pointer-events: none; /* 默认也不能点，出现时加show再开启 */
-    text-align: left;
-  }
+#miniMeMessage {
+  position: absolute;
+  bottom: 70px;
+  right: 90px;
+  width: fit-content;              /* ✅ 根据内容自适应宽度 */
+  max-width: 90vw;                 /* ✅ 限制最大宽度适配小屏 */
+  min-width: 215px;                /* ✅ 保留你设定的最小宽度 */
+  background: #FFFCF2;
+  border: 1px solid #3A86FE;
+  border-radius: 8px;
+  padding: 3px 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #3A86FE;
+  line-height: 0.5;
+  white-space: normal;            /* ✅ 允许自动换行 */
+  word-wrap: break-word;          /* ✅ 避免单词撑破容器 */
+  box-sizing: border-box;         /* ✅ 避免因 padding 导致尺寸变化 */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease, transform 1s ease;
+  pointer-events: none;
+  text-align: left;
+}
+
   
   #miniMeMessage.hidden {
     opacity: 0;

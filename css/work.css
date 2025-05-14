@@ -156,4 +156,6 @@ body a:hover,
 
 
 
-
+#miniMeMessage {
+  min-width: 210px;                /* ✅ 保留你设定的最小宽度 */
+}
